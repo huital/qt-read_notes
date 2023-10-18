@@ -36,6 +36,7 @@ private slots:
     void slotTreeMenu(const QPoint &pos);       // 设置右键菜单
     void slotAdditem();             // 添加子目录
     void slotAddNote(); // 添加问题
+    void slotDeleteitem();      // 删除某个文件目录/文件下所有内容
     void on_action_2_triggered();
 
     void on_actCreateChapter_triggered();
@@ -47,6 +48,15 @@ private slots:
     void on_pButton_show_clicked();     // 显示答案内容
 
     void on_pBtn_save_clicked();        // 保存问题和答案的内容
+
+    void on_action_3_triggered();
+
+    void deleteFileDirectory(const QString &path);
+    void on_actionactionDelete_triggered();
+
+    void clear_current_point(QString &delete_name);     // 判断是否需要修改当前的笔记问题指向
+
+    bool is_null(const QString& name);  // 判断输入的内容是否为空，并提示框
 
 private:
     Ui::MainWindow *ui;
